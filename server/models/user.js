@@ -28,20 +28,20 @@ const userSchema = new Schema(
   }
 );
 
-// pre-save middleware to create password
+// pre-save middleware to create password every time user is added or password is changed
 userSchema.pre("save", async function (next) {
-    if (this.isNew || this.isModified("password")) {
-        const saltRounds = 10;
-        this.password = await bcrypt.hash(this.password, saltRounds);
-    }
-    next();
+  if (this.isNew || this.isModified("password")) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+  next();
 });
 
-// compare incoming password with the hashed password
+// compare incoming password with the hashed password for login
 userSchema.methods.isCorrectPassword = async function (password) {
-    return bcrypt.compare(password, this.password);
+  return bcrypt.compare(password, this.password);
 };
 
-const User = model('User', userSchema);
+const User = model("User", userSchema);
 
 module.exports = User;
