@@ -5,10 +5,10 @@ const Foot = () => {
     <footer className="footer p-10 bg-base-200 text-base-content">
   <div>
     <span className="footer-title">Services</span> 
-    <p className="link link-hover">Branding</p> 
-    <p className="link link-hover">Design</p> 
-    <p className="link link-hover">Marketing</p> 
-    <p className="link link-hover">Advertisement</p>
+    <p className="link link-hover">Vintage</p> 
+    <p className="link link-hover">Y2K</p> 
+    <p className="link link-hover">Preloved</p> 
+    <p className="link link-hover">Revived</p>
   </div> 
   <div>
     <span className="footer-title">Company</span> 
@@ -27,10 +27,10 @@ const Foot = () => {
     <span className="footer-title">Newsletter</span> 
     <div className="form-control w-80">
       <label className="label">
-        <span className="label-text">Enter your email address</span>
+        <span className="label-text">Enter your email address to Stay in the Know About Upcoming Drops</span>
       </label> 
       <div className="relative">
-        <input type="text" placeholder="username@site.com" className="input input-bordered w-full pr-16" /> 
+        <input type="text" placeholder="youremail@site.com" className="input input-bordered w-full pr-16" /> 
         <button className="btn btn-primary absolute top-0 right-0 rounded-l-none">Subscribe</button>
       </div>
     </div>
