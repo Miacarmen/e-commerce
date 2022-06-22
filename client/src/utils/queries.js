@@ -13,3 +13,15 @@ export const QUERY_USER = gql`
     }
   }
 `;
+
+// query ALL products
+export const QUERY_PRODUCTS = gql`
+  query products() {
+    
+    }
+  }
+`;
+
+// query products based on category
+
+// query SINGLE product
